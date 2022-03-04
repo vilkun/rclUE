@@ -22,6 +22,8 @@ public class rclUE : ModuleRules
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 
+		PublicDefinitions.Add("__STDC_VERSION__=0");
+
 		// each of those could be put in a separate module, and their dependencies specified in the uplugin file
 		var ros2ModuleNameList = new string[] { "rcutils", "rmw", "tracetools",
 									 			"builtin_interfaces", "std_msgs", "rosgraph_msgs", "example_interfaces", "geometry_msgs", "sensor_msgs", "nav_msgs", "tf2_msgs", "ue4_interfaces", "ue_msgs", "unique_identifier_msgs", "action_msgs",
